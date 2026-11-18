@@ -2,12 +2,13 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>מאמרים · DJ Rivka</title>
 <meta name="description" content="טיפים, רעיונות והשראה לתכנון בת מצווה, מאת רבקה ניאזוב, DJ Rivka.">
 <meta name="theme-color" content="#0b060e">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&family=Secular+One&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
 <!-- built by build-pages.js from dj-rivka.html: do not edit the header, footer or shared styles here -->
 <style>
 /* tokens: the same HSL values go into index.css of the Lovable project */
@@ -1140,6 +1141,23 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
 .contact .h2 .l1,.contact .h2 .l2{display:block}
 .contact .lead{font-size:clamp(16px,calc(.4vw + 12.5px),19px);line-height:1.5;max-width:44ch}
 .contact .small{font-size:13px;line-height:1.5}
+
+/* all headings in Secular One (it has a single weight, so no synthetic bold) */
+:root{--font-display:'Secular One','Rubik','Assistant',Arial,sans-serif}
+h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.arts-head h2,.gallery .h2,.faq .h2,.contact .h2,.pk-card h3,.stops h3,.tall h3{font-family:var(--font-display);font-weight:400;font-synthesis:none}
+.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.arts-head h2,.gallery .h2,.faq .h2,.contact .h2{letter-spacing:-.01em}
+.hero h1{letter-spacing:-.015em}
+/* about: a bigger heading */
+.about h2{font-size:clamp(36px,calc(3.4vw + 14px),78px)}
+/* footer credit: just the logo and the words, no frame */
+.ft-credit{padding:0;border:0;border-radius:0;background:none}
+.ft-credit:hover{background:none;border:0;opacity:.85}
+
+/* footer: logo with the slogan under it, then the columns, with equal space between all of them */
+.foot .ft-s{display:flex;justify-content:space-between;align-items:flex-start;gap:32px}
+.foot .ft-s .ft-brand{justify-items:center;text-align:center}
+.foot .ft-s .ft-brand .slogan{margin-top:8px}
+@media (max-width:860px){.foot .ft-s{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}.foot .ft-s .ft-brand{grid-column:1 / -1}.foot .ft-s .ft-talk-col{grid-column:1 / -1;justify-self:start}}
 </style>
 <link rel="stylesheet" href="pages.css">
 </head>
@@ -1185,19 +1203,29 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
   </div>
   <div class="arch"><div class="cards" id="all-cards"></div></div>
 </div>
-<section class="page" style="padding-bottom:var(--sec-y)"><div class="letter" style="text-align:center">
-  <p class="hi">מתכננת בת מצווה? בואי נדבר.</p>
-  <p class="small" style="margin:0 auto 22px;max-width:52ch;font-size:var(--t-body)">ספרי לי קצת על האירוע שאת חולמת עליו, ואחזור אלייך לשיחה אישית, כדי שנחשוב יחד איך להפוך אותו לחגיגה שמחה.</p>
-  <a class="btn btn-main" href="https://wa.me/972504126679?text=%D7%94%D7%99%D7%99%20%D7%A8%D7%91%D7%A7%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%91%D7%AA%20%D7%9E%D7%A6%D7%95%D7%95%D7%94." target="_blank" rel="noopener">כתבי לי בוואטסאפ</a>
-</div></section>
+<section class="contact sec" id="contact" aria-labelledby="contact-title">
+  <div class="wrap"><div class="box">
+    <div>
+      <h2 class="h2" id="contact-title" data-edit="contact-title" data-edit-label="כותרת יצירת קשר"><span class="l1">מתכננת בת מצווה?</span> <span class="l2">בואי נדבר.</span></h2>
+      <p class="lead" data-edit="contact-lead" data-edit-label="טקסט יצירת קשר">ספרי לי קצת על האירוע שאת חולמת עליו, ואחזור אלייך לשיחה אישית, כדי שנחשוב יחד איך להפוך אותו לחגיגה שמחה.</p>
+      <div class="acts"><a class="btn btn-main js-wa" href="https://wa.me/972504126679"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg>כתבי לי בוואטסאפ</a><a class="btn btn-ghost" href="tel:0504126679">050-4126679</a></div>
+      <p class="small">השארת הפרטים אינה אישור להזמנת האירוע. סגירת התאריך והתנאים נעשית בתיאום אישי.</p>
+    </div>
+    <form id="form" novalidate aria-label="טופס פנייה">
+      <div class="row2"><label><span class="sr">שם</span><input name="name" placeholder="שם" autocomplete="name" required></label><label><span class="sr">טלפון</span><input name="phone" type="tel" placeholder="טלפון" autocomplete="tel" inputmode="tel" required></label></div>
+      <div class="row2"><label><span class="sr">מייל</span><input name="email" type="email" placeholder="מייל" autocomplete="email"></label><label><span class="sr">תאריך האירוע</span><input name="date" type="text" placeholder="תאריך האירוע (אם כבר יש)"></label></div>
+      <label><span class="sr">ספרי לי על האירוע</span><textarea name="msg" placeholder="ספרי לי קצת על האירוע" rows="3"></textarea></label>
+      <button class="btn btn-main" type="submit">שליחה במייל</button>
+      <p class="small" id="form-note" role="status"></p>
+    </form>
+  </div></div>
+</section>
 </main>
 <footer class="foot">
   <div class="wrap ft-s">
     <div class="ft-brand">
       <a href="dj-rivka.html" aria-label="DJ Rivka, לדף הבית"><img src="public/img/logo-gold.webp" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
       <p class="slogan">האושר שלי, הרחבה שלך</p>
-      <p class="ft-line">דיג'יית, מנחה ומפיקה של אירועי בת מצווה ואירועי נשים.</p>
-      <span class="ft-chip"><i aria-hidden="true"></i>מגיעה לכל הארץ</span>
     </div>
     <nav class="ft-col" aria-label="מפת אתר"><h3>מפת אתר</h3>
       <ul><li><a href="dj-rivka.html#about">אודות</a></li><li><a href="dj-rivka.html#how">איך זה עובד</a></li><li><a href="dj-rivka.html#packages">חבילות</a></li><li><a href="dj-rivka.html#reviews">המלצות</a></li><li><a href="gallery.html">גלריה</a></li><li><a href="articles.html">מאמרים</a></li><li><a href="dj-rivka.html#faq">שאלות נפוצות</a></li></ul>
@@ -1222,5 +1250,18 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
 <script src="edits-apply.js"></script>
 <script src="articles-data.js"></script>
 <script src="articles.js"></script>
+<script>
+  var form = document.getElementById('form'), note = document.getElementById('form-note');
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var d = new FormData(form);
+    if (!String(d.get('name') || '').trim() || !String(d.get('phone') || '').trim()) { note.textContent = 'כדי שאוכל לחזור אלייך, צריך שם וטלפון.'; return; }
+    var body = 'שם: ' + d.get('name') + '\nטלפון: ' + d.get('phone') + '\nמייל: ' + (d.get('email') || '') + '\nתאריך האירוע: ' + (d.get('date') || '') + '\n\n' + (d.get('msg') || '') + (src ? '\n\n(' + SOURCES[src] + ')' : '');
+    location.href = 'mailto:dj0555646327@gmail.com?subject=' + encodeURIComponent('פנייה מהאתר: בת מצווה') + '&body=' + encodeURIComponent(body);
+    note.textContent = 'נפתחה הודעת מייל מוכנה. נשאר רק ללחוץ שליחה.';
+  });
+
+</script>
+<script src="reveal.js"></script>
 </body>
 </html>

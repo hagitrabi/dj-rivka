@@ -41,12 +41,17 @@ ${footer.replace(/href="https:\/\/wa\.me\/972504126679"/g, `href="${WA}" target=
 <script src="edits.js"></script>
 <script src="edits-apply.js"></script>
 ${scripts}
+${formJs}
+<script src="reveal.js"></script>
 </body>
 </html>
 `;
 }
 
-const cta = `<section class="page" style="padding-bottom:var(--sec-y)"><div class="letter" style="text-align:center">
+// the call to action on the inner pages is the home page's contact box with its form (same look, same behaviour)
+const contact = home.slice(home.indexOf('<section class="contact sec"'), home.indexOf('</section>', home.indexOf('<section class="contact sec"')) + 10);
+const formJs = '<script>\n' + home.slice(home.indexOf("  var form = document.getElementById('form')"), home.indexOf('  });', home.indexOf("  var form = document.getElementById('form')")) + 6) + '\n</script>';
+const cta0 = `<section class="page" style="padding-bottom:var(--sec-y)"><div class="letter" style="text-align:center">
   <p class="hi">מתכננת בת מצווה? בואי נדבר.</p>
   <p class="small" style="margin:0 auto 22px;max-width:52ch;font-size:var(--t-body)">ספרי לי קצת על האירוע שאת חולמת עליו, ואחזור אלייך לשיחה אישית, כדי שנחשוב יחד איך להפוך אותו לחגיגה שמחה.</p>
   <a class="btn btn-main" href="${WA}" target="_blank" rel="noopener">כתבי לי בוואטסאפ</a>
@@ -63,7 +68,7 @@ fs.writeFileSync(path.join(dir, 'articles.html'), page('מאמרים · DJ Rivka
   </div>
   <div class="arch"><div class="cards" id="all-cards"></div></div>
 </div>
-${cta}`, '<script src="articles-data.js"></script>\n<script src="articles.js"></script>'));
+${contact}`, '<script src="articles-data.js"></script>\n<script src="articles.js"></script>'));
 
 // ---- one article ----
 const SHARE_WA = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg>';
@@ -89,7 +94,7 @@ fs.writeFileSync(path.join(dir, 'article.html'), page('מאמר · DJ Rivka', ''
   </div>
   <section class="more" id="a-more" aria-labelledby="more-t"><h2 id="more-t">עוד מאמרים</h2><div class="cards"></div></section>
 </div>
-${cta}`, '<script src="articles-data.js"></script>\n<script src="articles.js"></script>'));
+${contact}`, '<script src="articles-data.js"></script>\n<script src="articles.js"></script>'));
 
 // ---- full gallery ----
 fs.writeFileSync(path.join(dir, 'gallery.html'), page('גלריה · DJ Rivka', 'רגעים מאירועי בת מצווה ואירועי נשים עם רבקה ניאזוב, DJ Rivka.', `
@@ -103,7 +108,7 @@ fs.writeFileSync(path.join(dir, 'gallery.html'), page('גלריה · DJ Rivka', 
   <div class="gal-grid" id="gal-grid"></div>
 </div>
 <dialog class="view-dlg" id="view-dlg" aria-label="צפייה"><button class="x" type="button" aria-label="סגירה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div id="view-in"></div></dialog>
-${cta}`, `<script>
+${contact}`, `<script>
 /* the full gallery: every video and photo; a click opens it large (videos with sound) */
 (function () {
   var P = 'public/gallery/', items = [];

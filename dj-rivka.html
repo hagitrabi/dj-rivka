@@ -2,11 +2,12 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DJ Rivka · דיג'יית ומנחה לבת מצווה</title>
 <meta name="description" content="רבקה ניאזוב, דיג'יית, מנחה ומפעילה לבת מצווה ולאירועי נשים. תכנון אישי, לוח זמנים מסודר והנחיה שמכניסה את כולן לרחבה.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&family=Secular+One&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
 <script>document.documentElement.classList.add("js")</script>
 <style>
 /* tokens: the same HSL values go into index.css of the Lovable project */
@@ -1139,6 +1140,23 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
 .contact .h2 .l1,.contact .h2 .l2{display:block}
 .contact .lead{font-size:clamp(16px,calc(.4vw + 12.5px),19px);line-height:1.5;max-width:44ch}
 .contact .small{font-size:13px;line-height:1.5}
+
+/* all headings in Secular One (it has a single weight, so no synthetic bold) */
+:root{--font-display:'Secular One','Rubik','Assistant',Arial,sans-serif}
+h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.arts-head h2,.gallery .h2,.faq .h2,.contact .h2,.pk-card h3,.stops h3,.tall h3{font-family:var(--font-display);font-weight:400;font-synthesis:none}
+.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.arts-head h2,.gallery .h2,.faq .h2,.contact .h2{letter-spacing:-.01em}
+.hero h1{letter-spacing:-.015em}
+/* about: a bigger heading */
+.about h2{font-size:clamp(36px,calc(3.4vw + 14px),78px)}
+/* footer credit: just the logo and the words, no frame */
+.ft-credit{padding:0;border:0;border-radius:0;background:none}
+.ft-credit:hover{background:none;border:0;opacity:.85}
+
+/* footer: logo with the slogan under it, then the columns, with equal space between all of them */
+.foot .ft-s{display:flex;justify-content:space-between;align-items:flex-start;gap:32px}
+.foot .ft-s .ft-brand{justify-items:center;text-align:center}
+.foot .ft-s .ft-brand .slogan{margin-top:8px}
+@media (max-width:860px){.foot .ft-s{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}.foot .ft-s .ft-brand{grid-column:1 / -1}.foot .ft-s .ft-talk-col{grid-column:1 / -1;justify-self:start}}
 </style>
 </head>
 <body>
@@ -1498,8 +1516,6 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
     <div class="ft-brand">
       <a href="dj-rivka.html" aria-label="DJ Rivka, לדף הבית"><img src="public/img/logo-gold.webp" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
       <p class="slogan">האושר שלי, הרחבה שלך</p>
-      <p class="ft-line">דיג'יית, מנחה ומפיקה של אירועי בת מצווה ואירועי נשים.</p>
-      <span class="ft-chip"><i aria-hidden="true"></i>מגיעה לכל הארץ</span>
     </div>
     <nav class="ft-col" aria-label="מפת אתר"><h3>מפת אתר</h3>
       <ul><li><a href="dj-rivka.html#about">אודות</a></li><li><a href="dj-rivka.html#how">איך זה עובד</a></li><li><a href="dj-rivka.html#packages">חבילות</a></li><li><a href="dj-rivka.html#reviews">המלצות</a></li><li><a href="gallery.html">גלריה</a></li><li><a href="articles.html">מאמרים</a></li><li><a href="dj-rivka.html#faq">שאלות נפוצות</a></li></ul>
@@ -1907,5 +1923,6 @@ h3,.pk-card h3,.stops h3,.tall h3,.fq-txt b{letter-spacing:-.01em}
   });
 })();
 </script>
+<script src="reveal.js"></script>
 </body>
 </html>
