@@ -26,6 +26,9 @@ function page(title, desc, body, scripts) {
 <title>${title}</title>
 <meta name="description" content="${desc}">
 <meta name="theme-color" content="#0b060e">
+<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png">
+<link rel="apple-touch-icon" href="public/img/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 ${fonts}
 <!-- built by build-pages.js from dj-rivka.html: do not edit the header, footer or shared styles here -->

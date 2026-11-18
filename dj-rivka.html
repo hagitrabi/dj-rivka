@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DJ Rivka · דיג'יית ומנחה לבת מצווה</title>
 <meta name="description" content="רבקה ניאזוב, דיג'יית, מנחה ומפעילה לבת מצווה ולאירועי נשים. תכנון אישי, לוח זמנים מסודר והנחיה שמכניסה את כולן לרחבה.">
+<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png">
+<link rel="apple-touch-icon" href="public/img/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700;800&family=Rubik:wght@500;600;700;800&family=Secular+One&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
 <script>document.documentElement.classList.add("js")</script>
@@ -1750,7 +1753,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     // the folds may still be closing at this moment, so their current height is taken off the column
     var textClosed = text.offsetHeight - stops.reduce(function (t, s) { return t + s.querySelector('.desc').offsetHeight; }, 0);
     var used = phone ? padT + text.querySelector('h2').offsetHeight + 90 + disc.offsetHeight + stopsH + 60 : padT + Math.max(disc.offsetHeight, textClosed + longest + 10) + 30;
-    if (used > innerHeight || disc.offsetWidth < 220) {
+    if (used > innerHeight || disc.offsetWidth < (phone ? 170 : 220)) {
       how.classList.remove('scrolly'); stopsEl.style.removeProperty('--stops-h'); disc.style.removeProperty('--d');
       hots.forEach(function (h) { h.classList.add('on'); }); return;
     }
