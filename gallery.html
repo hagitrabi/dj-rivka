@@ -1158,6 +1158,45 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 .foot .ft-s .ft-brand{justify-items:center;text-align:center}
 .foot .ft-s .ft-brand .slogan{margin-top:8px}
 @media (max-width:860px){.foot .ft-s{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}.foot .ft-s .ft-brand{grid-column:1 / -1}.foot .ft-s .ft-talk-col{grid-column:1 / -1;justify-self:start}}
+
+/* mess on phones: a compact heading and plan card, so the heading and the card fit one phone screen together
+   and the notes-into-plan effect runs (it switches itself off when they do not fit) */
+@media (max-width:600px){
+  .mess .pin{padding-top:72px}
+  .mess .head h2{font-size:clamp(24px,7.2vw,30px);line-height:1.14}
+  .mess .sub{margin-top:8px;min-height:0}
+  .mess .sub p{font-size:15px;line-height:1.45}
+  .mess .hint{display:none}
+  .plan{padding:14px 14px 12px;border-radius:20px}
+  .plan-top{margin-bottom:10px}
+  .plan-top h3{font-size:18px}
+  .plan-top small{font-size:11.5px}
+  .plan ul{gap:6px}
+  .plan li{min-height:38px;padding:6px 10px;font-size:14px;border-radius:11px}
+  .plan li em{font-size:11px;padding:2px 8px}
+  .bit{width:118px;padding:8px 10px;font-size:12px}.bit b,.bit.sticky{font-size:17px}
+  .bit.receipt b{font-size:18px}
+}
+
+/* the closing line stays hidden on every screen (it was hidden on desktop in the editor), so it never covers the subtitle */
+.mess .sub .after{display:none}
+/* FAQ on tablet and phone, after the mobile chat section of the reference: centred heading, the questions as a row of
+   pills to swipe sideways, and the phone below with the note on its corner */
+@media (max-width:900px){
+  .faq .fq-side{text-align:center}
+  .faq .fq-side .lead{margin-inline:auto}
+  .fq-list{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--gutter));padding:4px var(--gutter) 10px}
+  .fq-list::-webkit-scrollbar{display:none}
+  .fq-list li{flex:none;scroll-snap-align:start}
+  .fq-chat{grid-template-columns:auto auto;width:auto;max-width:78vw;padding:8px 18px 8px 10px;border-radius:999px;gap:10px}
+  .fq-chat:hover{transform:none}
+  .fq-txt small,.fq-dot{display:none}
+  .fq-txt b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px}
+  .fq-chat .fq-av{width:34px;height:34px;font-size:14px}
+  .fq-phone-wrap{margin-top:52px}
+  .fq-phone{width:min(360px,88vw)}
+  .fq-note{top:-40px;inset-inline-start:auto;inset-inline-end:-4px;rotate:-5deg;width:190px}
+}
 </style>
 <link rel="stylesheet" href="pages.css">
 </head>
