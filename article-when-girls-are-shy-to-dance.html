@@ -18,9 +18,9 @@
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"ומה אם הבנות מתביישות לרקוד?","description":"מה עושים כשהבנות מתביישות לרקוד בבת מצווה? איך בונים רחבה מלאה בהדרגה, עם הפעלות שמכניסות את כולן.","image":"https://hagitrabi.github.io/dj-rivka/public/img/dj-rivka-dancing-with-headphones.webp","inLanguage":"he","author":{"@type":"Person","name":"רבקה ניאזוב"},"publisher":{"@type":"Organization","name":"DJ Rivka","logo":{"@type":"ImageObject","url":"https://hagitrabi.github.io/dj-rivka/public/img/dj-rivka-logo.webp"}},"mainEntityOfPage":"https://hagitrabi.github.io/dj-rivka/article-when-girls-are-shy-to-dance.html"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"דף הבית","item":"https://hagitrabi.github.io/dj-rivka/"},{"@type":"ListItem","position":2,"name":"מאמרים","item":"https://hagitrabi.github.io/dj-rivka/articles.html"},{"@type":"ListItem","position":3,"name":"ומה אם הבנות מתביישות לרקוד?","item":"https://hagitrabi.github.io/dj-rivka/article-when-girls-are-shy-to-dance.html"}]}]</script>
 
 <meta name="theme-color" content="#0b060e">
-<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png?v=202611181258">
-<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png?v=202611181258">
-<link rel="apple-touch-icon" href="public/img/icon-180.png?v=202611181258">
+<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png?v=202611181304">
+<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png?v=202611181304">
+<link rel="apple-touch-icon" href="public/img/icon-180.png?v=202611181304">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700&family=Secular+One&display=swap" media="print" onload="this.media='all'">
 <!-- built by build-pages.js from dj-rivka.html: do not edit the header, footer or shared styles here -->
@@ -1279,8 +1279,28 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 
 /* FAQ phone a little smaller on phones */
 @media (max-width:600px){.fq-phone{width:min(300px,80vw);aspect-ratio:9/17;border-radius:38px;padding:9px}.fq-scr{border-radius:30px}.fq-opt{font-size:12.5px;min-height:40px;padding:7px 11px}.fq-list{gap:6px}}
+
+/* messages in the site's running text, without names */
+.bit.msg b{font:700 15px/1.3 var(--font-body);margin-bottom:4px}
+@media (max-width:1100px){.bit.msg b{font-size:13.5px}}
+@media (max-width:600px){.bit.msg b{font-size:12.5px}}
+/* mess on short phones: a tighter card so the animation still fits */
+.mess.tight .plan{padding:12px 14px}.mess.tight .plan-top{margin-bottom:8px}.mess.tight .plan-top h3{font-size:17px}
+.mess.tight .plan ul{gap:4px}.mess.tight .plan li{min-height:30px;padding-block:3px;font-size:12.5px}.mess.tight .plan li em{font-size:11px;padding:1px 8px}
+.mess.tight .head h2{font-size:26px}.mess.tight .sub{font-size:14.5px}
+/* services strip on phones: arrows, dots and the swipe hint */
+.svc-nav{display:none}
+@media (max-width:1000px){
+  .svc-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:6px}
+  .svc-nav button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:hsl(var(--foreground));background:hsl(var(--surface-2));border:1px solid hsl(var(--brand-hi)/.45)}
+  .svc-nav button svg{width:18px;height:18px}
+  .svc-dots{display:flex;gap:7px}.svc-dots i{width:7px;height:7px;border-radius:50%;background:hsl(var(--foreground)/.25);transition:width .3s ease,background .3s ease}
+  .svc-dots i.on{width:22px;border-radius:4px;background:hsl(var(--magenta))}
+  .svc2 .swipe{display:block;text-align:center;margin-top:10px;font-size:14px;color:hsl(var(--muted))}
+  .tall{scroll-snap-align:center}
+}
 </style>
-<link rel="stylesheet" href="pages.css?v=202611181258">
+<link rel="stylesheet" href="pages.css?v=202611181304">
 </head>
 <body class="inner" data-article="a2">
 <header class="top solid" id="top">
@@ -1288,7 +1308,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     <nav class="nav nav-a" aria-label="ניווט ראשי"><a href="./#about">אודות</a><a href="./#packages">חבילות</a><a href="./#reviews">המלצות</a><a href="./#gallery">גלריה</a><a href="./#faq">שאלות נפוצות</a></nav>
     <a class="logo-tab" href="./" aria-label="DJ Rivka, לראש הדף">
       <svg class="tab-shape" viewBox="0 0 260 104" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="tabfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(280 34% 10%)"/><stop offset="1" stop-color="hsl(282 40% 15%)"/></linearGradient><linearGradient id="tabline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b84ae8"/><stop offset=".5" stop-color="#f0c27a"/><stop offset="1" stop-color="#e64fb8"/></linearGradient></defs><path d="M0 0H260C244 0 238 8 235 18L222 80C218 96 206 104 190 104H70C54 104 42 96 38 80L25 18C22 8 16 0 0 0Z" fill="url(#tabfill)"/><path d="M0 0C16 0 22 8 25 18L38 80C42 96 54 104 70 104H190C206 104 218 96 222 80L235 18C238 8 244 0 260 0" fill="none" stroke="url(#tabline)" stroke-width="1.6"/></svg>
-      <img src="public/img/dj-rivka-logo.webp?v=202611181258" width="1536" height="504" alt="DJ Rivka">
+      <img src="public/img/dj-rivka-logo.webp?v=202611181304" width="1536" height="504" alt="DJ Rivka">
     </a>
     <div class="nav-b">
       <a class="btn btn-ring js-wa" data-edit="nav-cta" data-edit-label="כפתור בתפריט" aria-label="להזמנות ויצירת קשר בוואטסאפ" href="https://wa.me/972504126679?text=%D7%94%D7%99%D7%99%20%D7%A8%D7%91%D7%A7%D7%94%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20%D7%91%D7%AA%20%D7%9E%D7%A6%D7%95%D7%95%D7%94." target="_blank" rel="noopener"><span class="long">להזמנות ויצירת קשר</span><span class="short">דברי איתי</span><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg></a></div>
@@ -1317,9 +1337,9 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 
 <div class="progress" aria-hidden="true"></div>
 <div class="page" id="article">
-  <nav class="crumbs" aria-label="מיקום באתר"><a href="./">דף הבית</a><span aria-hidden="true">/</span><a href="articles.html?v=202611181258">מאמרים</a><span aria-hidden="true">/</span><span id="a-crumb">ומה אם הבנות מתביישות לרקוד?</span></nav>
+  <nav class="crumbs" aria-label="מיקום באתר"><a href="./">דף הבית</a><span aria-hidden="true">/</span><a href="articles.html?v=202611181304">מאמרים</a><span aria-hidden="true">/</span><span id="a-crumb">ומה אם הבנות מתביישות לרקוד?</span></nav>
   <div class="art-top"><h1 id="a-title">ומה אם הבנות מתביישות לרקוד?</h1><p class="sub" id="a-sub">רחבה מלאה לא קורית לבד. היא נבנית בהדרגה.</p></div>
-  <figure class="art-hero"><img id="a-img" src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611181258" alt="ומה אם הבנות מתביישות לרקוד?" width="1296" height="474"></figure>
+  <figure class="art-hero"><img id="a-img" src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611181304" alt="ומה אם הבנות מתביישות לרקוד?" width="1296" height="474"></figure>
   <div class="art-grid">
     <article class="art-body"><div id="a-body"><section id="s1"><h2><span class="num">1.</span>מתחילים במשהו קל</h2><p>רוב הבנות לא קופצות ראשונות לרחבה, וזה טבעי. מתחילים במשהו קל: מעגל קטן, משחק, אביזר שמעביר את תשומת הלב מהן אל הכיף.</p></section><section id="s2"><h2><span class="num">2.</span>כשהראשונות נכנסות, כולן מצטרפות</h2><p>כשההפעלה מכניסה כמה בנות ראשונות, האחרות מצטרפות. המטרה היא שאף אחת לא תעמוד בצד, וכלת בת המצווה תרגיש במרכז בלי להרגיש לחץ.</p></section></div><a class="next" id="a-next" href="#"><div><small>המאמר הבא</small><b id="a-next-t"></b><span class="go">להמשך קריאה <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></div><img id="a-next-img" src="" alt=""></a></article>
     <aside class="art-side" aria-label="ניווט במאמר">
@@ -1330,7 +1350,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
           <a id="sh-fb" href="#" target="_blank" rel="noopener" aria-label="שיתוף בפייסבוק"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6a22 22 0 0 0-2.4-.1C12.2 2.5 10.6 4 10.6 6.6v1.9H8V12h2.6v9.5H14V12h2.7l.4-3.5H14Z"/></svg></a>
           <button type="button" id="sh-copy" aria-label="העתקת הקישור"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></button>
         </div><p class="note" id="sh-note" role="status" aria-live="polite"></p></div>
-        <div class="side-end"><a class="btn btn-ghost" href="articles.html?v=202611181258"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>חזרה לעמוד המאמרים</a><p class="now" id="a-now"></p></div>
+        <div class="side-end"><a class="btn btn-ghost" href="articles.html?v=202611181304"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>חזרה לעמוד המאמרים</a><p class="now" id="a-now"></p></div>
       </div>
     </aside>
   </div>
@@ -1357,11 +1377,11 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 <footer class="foot">
   <div class="wrap ft-s">
     <div class="ft-brand">
-      <a href="./" aria-label="DJ Rivka, לדף הבית"><img src="public/img/dj-rivka-logo.webp?v=202611181258" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
+      <a href="./" aria-label="DJ Rivka, לדף הבית"><img src="public/img/dj-rivka-logo.webp?v=202611181304" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
       <p class="slogan">האושר שלי, הרחבה שלך</p>
     </div>
     <nav class="ft-col" aria-label="מפת אתר"><h3>מפת אתר</h3>
-      <ul><li><a href="./#about">אודות</a></li><li><a href="./#how">איך זה עובד</a></li><li><a href="./#packages">חבילות</a></li><li><a href="./#reviews">המלצות</a></li><li><a href="gallery.html?v=202611181258">גלריה</a></li><li><a href="articles.html?v=202611181258">מאמרים</a></li><li><a href="./#faq">שאלות נפוצות</a></li></ul>
+      <ul><li><a href="./#about">אודות</a></li><li><a href="./#how">איך זה עובד</a></li><li><a href="./#packages">חבילות</a></li><li><a href="./#reviews">המלצות</a></li><li><a href="gallery.html?v=202611181304">גלריה</a></li><li><a href="articles.html?v=202611181304">מאמרים</a></li><li><a href="./#faq">שאלות נפוצות</a></li></ul>
     </nav>
     <nav class="ft-col" aria-label="מסמכים"><h3>מסמכים</h3>
       <ul><li><a href="#">הצהרת נגישות</a></li><li><a href="#">מדיניות פרטיות</a></li><li><a href="#">תקנון אתר</a></li></ul>
@@ -1375,14 +1395,14 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   <div class="wrap ft-bottom">
     <span>© 2026 DJ Rivka · רבקה ניאזוב. כל הזכויות שמורות.</span>
     <a class="ft-credit" href="https://wa.me/972548249224?text=%D7%94%D7%99%D7%99%20%D7%97%D7%92%D7%99%D7%AA%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20DJ%20Rivka%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%91%D7%A0%D7%99%D7%99%D7%AA%20%D7%90%D7%AA%D7%A8." target="_blank" rel="noopener" aria-label="אפיון, עיצוב ופיתוח: חגית רבי. פתיחת וואטסאפ">
-      <img src="public/img/hagit-rabi-web-design-logo.png?v=202611181258" width="360" height="160" alt="" loading="lazy"><span>אפיון, עיצוב ופיתוח: <b>חגית רבי</b></span>
+      <img src="public/img/hagit-rabi-web-design-logo.png?v=202611181304" width="360" height="160" alt="" loading="lazy"><span>אפיון, עיצוב ופיתוח: <b>חגית רבי</b></span>
     </a>
   </div>
 </footer>
-<script src="edits.js?v=202611181258"></script>
-<script src="edits-apply.js?v=202611181258"></script>
-<script src="articles-data.js?v=202611181258"></script>
-<script src="articles.js?v=202611181258"></script>
+<script src="edits.js?v=202611181304"></script>
+<script src="edits-apply.js?v=202611181304"></script>
+<script src="articles-data.js?v=202611181304"></script>
+<script src="articles.js?v=202611181304"></script>
 <script>
   var form = document.getElementById('form'), note = document.getElementById('form-note');
   form.addEventListener('submit', function (ev) {
@@ -1395,6 +1415,6 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   });
 
 </script>
-<script src="reveal.js?v=202611181258"></script>
+<script src="reveal.js?v=202611181304"></script>
 </body>
 </html>
