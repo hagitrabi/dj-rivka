@@ -149,7 +149,7 @@ for (const a of all) {
   const ld = [{ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.desc, image: a.img, inLanguage: 'he', author: { '@type': 'Person', name: 'רבקה ניאזוב' }, publisher: { '@type': 'Organization', name: 'DJ Rivka', logo: { '@type': 'ImageObject', url: 'public/img/dj-rivka-logo.webp' } }, mainEntityOfPage: url },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'דף הבית', item: './' }, { '@type': 'ListItem', position: 2, name: 'מאמרים', item: 'articles.html' }, { '@type': 'ListItem', position: 3, name: a.title, item: url }] }];
   let p = tpl.replace('<title>מאמר · DJ Rivka</title>', '<title>' + esc(a.title) + ' · DJ Rivka</title>')
-    .replace('<meta name="description" content="">', '<meta name="description" content="' + esc(a.desc) + '">\n' + share(a.title + ' · DJ Rivka', a.desc, url, a.img, 'article') + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script>')
+    .replace('<meta name="description" content="">', '<meta name="description" content="' + esc(a.desc) + '">\n' + share(a.title + ' · DJ Rivka', a.desc, url, 'public/img/dj-rivka-share.jpg', 'article') + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script>')
     .replace('<body class="inner">', '<body class="inner" data-article="' + a.id + '">')
     .replace('<span id="a-crumb"></span>', '<span id="a-crumb">' + esc(a.title) + '</span>')
     .replace('<h1 id="a-title"></h1>', '<h1 id="a-title">' + esc(a.title) + '</h1>')
