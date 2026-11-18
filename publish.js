@@ -32,7 +32,7 @@ for (const f of fs.readdirSync(dest).filter((x) => x.endsWith('.html'))) {
   s = s.replace(/href="dj-rivka\.html(#[^"]*)?"/g, (m, h) => `href="./${h || ''}"`);
   // full addresses for canonical, share tags and structured data
   s = s.replace(/(<link rel="canonical" href=")([^"]*)"/g, (m, a, u) => a + abs(u) + '"');
-  s = s.replace(/(<meta property="og:(?:url|image)" content=")([^"]*)"/g, (m, a, u) => a + abs(u) + '"');
+  s = s.replace(/(<meta (?:property="og:(?:url|image|image:secure_url)"|name="twitter:image") content=")([^"]*)"/g, (m, a, u) => a + abs(u) + '"');
   s = s.replace(/<script type="application\/ld\+json">([^]*?)<\/script>/g, (m, j) => {
     const fix = (o) => { if (Array.isArray(o)) return o.map(fix); if (o && typeof o === 'object') { for (const k of Object.keys(o)) o[k] = ['url', 'image', 'logo', 'item', 'mainEntityOfPage', '@id'].includes(k) && typeof o[k] === 'string' ? (k === '@id' ? BASE + o[k] : abs(o[k])) : fix(o[k]); } return o; };
     return '<script type="application/ld+json">' + JSON.stringify(fix(JSON.parse(j))) + '</script>';
