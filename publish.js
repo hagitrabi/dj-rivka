@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const BASE = 'https://hagitrabi.github.io/dj-rivka/';
-const src = __dirname, dest = path.resolve(src, '../../dj-rivka-github');
+const src = __dirname, dest = path.resolve(src, '../גרסה לאתר החי (גיטהב)');
 const msg = process.argv[2] || 'Update the site', live = process.argv.includes('--live');
 
 execSync('node build-pages.js', { cwd: src, stdio: 'inherit' });
