@@ -42,6 +42,41 @@ for (const f of fs.readdirSync(dest).filter((x) => x.endsWith('.html'))) {
   if (f === 'dj-rivka.html') s = `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="${BASE}"><meta http-equiv="refresh" content="0; url=./"><title>DJ Rivka</title></head><body><a href="./">DJ Rivka</a></body></html>\n`;
   fs.writeFileSync(path.join(dest, f), s);
 }
+// a tiny page just for sharing (link/): only the preview details, then straight on to the site. WhatsApp reads it fast and reliably.
+{
+  const h = fs.readFileSync(path.join(dest, 'index.html'), 'utf8');
+  const pick = (re) => (h.match(re) || [, ''])[1];
+  const title = pick(/<meta property="og:title" content="([^"]*)"/), desc = pick(/<meta property="og:description" content="([^"]*)"/);
+  const img = pick(/<meta property="og:image" content="([^"]*)"/), alt = pick(/<meta property="og:image:alt" content="([^"]*)"/);
+  fs.mkdirSync(path.join(dest, 'link'), { recursive: true });
+  fs.writeFileSync(path.join(dest, 'link', 'index.html'), `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>${title}</title>
+<meta name="description" content="${desc}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="DJ Rivka">
+<meta property="og:title" content="${title}">
+<meta property="og:description" content="${desc}">
+<meta property="og:url" content="${BASE}link/">
+<meta property="og:image" content="${img}">
+<meta property="og:image:secure_url" content="${img}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${alt}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${img}">
+<meta http-equiv="refresh" content="0; url=../?v=${v}">
+<script>location.replace('../?v=${v}' + location.hash)</script>
+</head>
+<body><a href="../">DJ Rivka</a></body>
+</html>
+`);
+}
 // sitemap and robots
 const urls = ['', ...pages.filter((p) => p !== 'dj-rivka.html')];
 fs.writeFileSync(path.join(dest, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${BASE}${u}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
@@ -51,4 +86,4 @@ const run = (c) => execSync(c, { cwd: dest, stdio: 'inherit' });
 run('git add -A');
 try { run(`git commit -q -m "${msg.replace(/"/g, "'")}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"`); } catch { console.log('nothing new to publish'); }
 run('git push -q');
-console.log((live ? 'LIVE' : 'preview') + ' published, version ' + v + ' → ' + BASE + '?v=' + v);
+console.log((live ? 'LIVE' : 'preview') + ' published, version ' + v + ' → ' + BASE + '?v=' + v + '   share link: ' + BASE + 'link/');
