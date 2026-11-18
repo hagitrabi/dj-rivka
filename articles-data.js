@@ -1,32 +1,35 @@
-/* All the articles in one place. The article page, the all-articles page and the cards on the home page read from here.
+/* All the articles in one place. Each has an address (slug: its page is article-<slug>.html) and a search description (desc). The article page, the all-articles page and the cards on the home page read from here.
    To add an article: copy one block, give it a new id, and fill in the texts. The contents list on its page builds itself
    from the "h" headings. */
 window.RIVKA_ARTICLES = [
   {
-    id: 'a1',
+    id: 'a1', slug: 'planning-a-bat-mitzvah',
+    desc: 'איך מתחילים לתכנן בת מצווה: מהבת עצמה, דרך תאריך, אולם וספקים, ועד מי מנהלת את הערב. טיפים מ-DJ רבקה ניאזוב.',
     title: 'מתכננת בת מצווה? מאיפה בכלל מתחילים',
     teaser: 'לפני האולם, לפני הקליפ ולפני השמלה: מתחילים מהבת.',
-    img: 'public/img/g-at-mixer-v.webp', pos: '50% 30%',
+    img: 'public/img/dj-rivka-at-the-mixer.webp', pos: '50% 30%',
     sections: [
       { h: 'מתחילים מהבת', p: ['השאלה הראשונה היא לא איפה ומתי, אלא מה היא אוהבת ואיך היא רוצה להרגיש בערב שלה. כשזה ברור, הרבה החלטות נעשות פשוטות יותר.'] },
       { h: 'תאריך, אולם וספקים', p: ['אחר כך כדאי לשריין תאריך ואולם, לעשות רשימה אחת של כל הספקים, ולתת לכל אחד מהם תפקיד ברור. ואת החלק של הערב עצמו, המוזיקה, ההנחיה והסדר, כדאי להעביר למישהי שמקשיבה לכן ובונה את התוכנית איתכן.'] }
     ]
   },
   {
-    id: 'a2',
+    id: 'a2', slug: 'when-girls-are-shy-to-dance',
+    desc: 'מה עושים כשהבנות מתביישות לרקוד בבת מצווה? איך בונים רחבה מלאה בהדרגה, עם הפעלות שמכניסות את כולן.',
     title: 'ומה אם הבנות מתביישות לרקוד?',
     teaser: 'רחבה מלאה לא קורית לבד. היא נבנית בהדרגה.',
-    img: 'public/img/g-laugh-h.webp', pos: '50% 35%',
+    img: 'public/img/dj-rivka-dancing-with-headphones.webp', pos: '50% 35%',
     sections: [
       { h: 'מתחילים במשהו קל', p: ['רוב הבנות לא קופצות ראשונות לרחבה, וזה טבעי. מתחילים במשהו קל: מעגל קטן, משחק, אביזר שמעביר את תשומת הלב מהן אל הכיף.'] },
       { h: 'כשהראשונות נכנסות, כולן מצטרפות', p: ['כשההפעלה מכניסה כמה בנות ראשונות, האחרות מצטרפות. המטרה היא שאף אחת לא תעמוד בצד, וכלת בת המצווה תרגיש במרכז בלי להרגיש לחץ.'] }
     ]
   },
   {
-    id: 'a3',
+    id: 'a3', slug: 'bat-mitzvah-song-list',
+    desc: 'איך בונים רשימת שירים לבת מצווה: מה החברות אוהבות, מה המשפחה אוהבת, ומה לא רוצים לשמוע בכלל.',
     title: 'רשימת השירים: מה כן, מה לא, ולמה זה חשוב',
     teaser: 'מוזיקה טובה לאירוע מתחילה מרשימה, ולא רק של מה שכן.',
-    img: 'public/img/g-over-listening-h.webp', pos: '50% 30%',
+    img: 'public/img/dj-rivka-mixing-from-above.webp', pos: '50% 30%',
     sections: [
       { h: 'שלוש רשימות לפני האירוע', p: ['לפני האירוע אני מבקשת שלוש רשימות: שירים שהחברות אוהבות, שירים שהמשפחה אוהבת, ושירים שאתן לא רוצות לשמוע בכלל.'] },
       { h: 'למה הרשימה השלישית חשובה', p: ['הרשימה השלישית חשובה לא פחות, כי היא שומרת על הערכים והגבולות של המשפחה. ככה המוזיקה מתאימה באמת לקהל, וכל מי שבאולם מרגישה בבית.'] }

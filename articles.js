@@ -1,5 +1,5 @@
 /* Fills the articles pages from RIVKA_ARTICLES (articles-data.js).
-   article.html?a=a1 shows one article: the contents list is built from its headings, follows the reading
+   article-<slug>.html shows one article: the contents list is built from its headings, follows the reading
    and jumps to a heading on click; share and back buttons; a reading bar under the header.
    articles.html shows every article as a card. */
 (function () {
@@ -7,7 +7,7 @@
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>';
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var card = function (a) {
-    return '<a class="acard" href="article.html?a=' + a.id + '"><span class="pic"><img src="' + a.img + '" alt="" loading="lazy" style="object-position:' + (a.pos || '50% 30%') + '"></span>' +
+    return '<a class="acard" href="article-' + a.slug + '.html"><span class="pic"><img src="' + a.img + '" alt="' + esc(a.title) + '" loading="lazy" decoding="async" style="object-position:' + (a.pos || '50% 30%') + '"></span>' +
       '<span class="row"><span class="t">' + esc(a.title) + '</span><span class="ar">' + ARROW + '</span></span></a>';
   };
 
@@ -17,7 +17,7 @@
 
   /* one article */
   var root = document.getElementById('article'); if (!root) return;
-  var id = new URLSearchParams(location.search).get('a');
+  var id = document.body.dataset.article || new URLSearchParams(location.search).get('a');
   var art = list.filter(function (x) { return x.id === id; })[0];
   if (!art) { location.replace('articles.html'); return; }
   document.title = art.title + ' · DJ Rivka';
@@ -30,7 +30,7 @@
   document.getElementById('a-crumb').textContent = art.title;
   /* the next article (after the last one it goes back to the first) */
   var idx = list.indexOf(art), nx = list[(idx + 1) % list.length], nextA = document.getElementById('a-next');
-  if (list.length > 1) { nextA.href = 'article.html?a=' + nx.id; document.getElementById('a-next-t').textContent = nx.title; var ni = document.getElementById('a-next-img'); ni.src = nx.img; ni.style.objectPosition = nx.pos || '50% 30%'; } else nextA.remove();
+  if (list.length > 1) { nextA.href = 'article-' + nx.slug + '.html'; document.getElementById('a-next-t').textContent = nx.title; var ni = document.getElementById('a-next-img'); ni.src = nx.img; ni.style.objectPosition = nx.pos || '50% 30%'; } else nextA.remove();
 
   var body = document.getElementById('a-body'), toc = document.getElementById('a-toc');
   body.innerHTML = (art.intro ? '<p class="lead">' + esc(art.intro) + '</p>' : '') + art.sections.map(function (s, i) {

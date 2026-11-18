@@ -17,6 +17,11 @@ const WA = 'https://wa.me/972504126679?text=' + encodeURIComponent('היי רב�
 const ARROW = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>';
 const BACK = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 
+function share(title, desc, url, img, type) {
+  return '<link rel="canonical" href="' + url + '">\n<meta property="og:type" content="' + (type || 'website') + '">\n<meta property="og:locale" content="he_IL">\n<meta property="og:site_name" content="DJ Rivka">\n' +
+    '<meta property="og:title" content="' + title + '">\n<meta property="og:description" content="' + desc + '">\n<meta property="og:url" content="' + url + '">\n' +
+    '<meta property="og:image" content="' + (img || 'public/img/dj-rivka-share.jpg') + '">\n<meta name="twitter:card" content="summary_large_image">\n';
+}
 function page(title, desc, body, scripts) {
   return `<!doctype html>
 <html lang="he" dir="rtl">
@@ -25,6 +30,7 @@ function page(title, desc, body, scripts) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${title}</title>
 <meta name="description" content="${desc}">
+${desc ? share(title, desc, /גלריה/.test(title) ? 'gallery.html' : 'articles.html') : ''}
 <meta name="theme-color" content="#0b060e">
 <link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png">
@@ -115,8 +121,8 @@ ${contact}`, `<script>
 /* the full gallery: every video and photo; a click opens it large (videos with sound) */
 (function () {
   var P = 'public/gallery/', items = [];
-  for (var i = 1; i <= 16; i++) { var id = 'g' + (i < 10 ? '0' : '') + i; items.push({ v: P + id + '.mp4', img: P + id + '.jpg', alt: 'רגע מאירוע של רבקה, סרטון ' + i }); }
-  for (var k = 1; k <= 5; k++) items.splice(k * 3, 0, { img: P + 'p' + k + '.jpg', alt: 'רגע מאירוע של רבקה, תמונה ' + k });
+  for (var i = 1; i <= 16; i++) { var id = 'bat-mitzvah-event-' + (i < 10 ? '0' : '') + i; items.push({ v: P + id + '.mp4', img: P + id + '.jpg', alt: 'DJ רבקה ניאזוב באירוע בת מצווה, סרטון ' + i }); }
+  for (var k = 1; k <= 5; k++) items.splice(k * 3, 0, { img: P + 'bat-mitzvah-photo-' + k + '.jpg', alt: 'רחבת ריקודים באירוע בת מצווה עם DJ רבקה, תמונה ' + k });
   var grid = document.getElementById('gal-grid'), dlg = document.getElementById('view-dlg'), box = document.getElementById('view-in');
   grid.innerHTML = items.map(function (it, n) {
     return '<button class="gal-item" type="button" data-n="' + n + '" aria-label="' + it.alt + (it.v ? ', הפעלה' : ', הגדלה') + '"><img src="' + it.img + '" alt="" loading="lazy">' +
@@ -131,4 +137,27 @@ ${contact}`, `<script>
 })();
 </script>`));
 
-console.log('built articles.html, article.html, gallery.html');
+
+// static article pages: article-<slug>.html with the full text in the HTML (readable without JavaScript and by search engines),
+// its own title, description, share tags and Article data. The template article.html is not published.
+const vm = require('vm'); const ctx = { window: {} }; vm.runInNewContext(fs.readFileSync(path.join(dir, 'articles-data.js'), 'utf8'), ctx);
+const all = ctx.window.RIVKA_ARTICLES, tpl = fs.readFileSync(path.join(dir, 'article.html'), 'utf8');
+const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+for (const a of all) {
+  const url = 'article-' + a.slug + '.html', body = a.sections.map((s, i) => '<section id="s' + (i + 1) + '"><h2><span class="num">' + (i + 1) + '.</span>' + esc(s.h) + '</h2>' + s.p.map((p) => '<p>' + esc(p) + '</p>').join('') + '</section>').join('');
+  const toc = a.sections.map((s, i) => '<li><a href="#s' + (i + 1) + '">' + esc(s.h) + '</a></li>').join('');
+  const ld = [{ '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.desc, image: a.img, inLanguage: 'he', author: { '@type': 'Person', name: 'רבקה ניאזוב' }, publisher: { '@type': 'Organization', name: 'DJ Rivka', logo: { '@type': 'ImageObject', url: 'public/img/dj-rivka-logo.webp' } }, mainEntityOfPage: url },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'דף הבית', item: './' }, { '@type': 'ListItem', position: 2, name: 'מאמרים', item: 'articles.html' }, { '@type': 'ListItem', position: 3, name: a.title, item: url }] }];
+  let p = tpl.replace('<title>מאמר · DJ Rivka</title>', '<title>' + esc(a.title) + ' · DJ Rivka</title>')
+    .replace('<meta name="description" content="">', '<meta name="description" content="' + esc(a.desc) + '">\n' + share(a.title + ' · DJ Rivka', a.desc, url, a.img, 'article') + '<script type="application/ld+json">' + JSON.stringify(ld) + '</script>')
+    .replace('<body class="inner">', '<body class="inner" data-article="' + a.id + '">')
+    .replace('<span id="a-crumb"></span>', '<span id="a-crumb">' + esc(a.title) + '</span>')
+    .replace('<h1 id="a-title"></h1>', '<h1 id="a-title">' + esc(a.title) + '</h1>')
+    .replace('<p class="sub" id="a-sub"></p>', '<p class="sub" id="a-sub">' + esc(a.teaser) + '</p>')
+    .replace('<img id="a-img" src="" alt=""', '<img id="a-img" src="' + a.img + '" alt="' + esc(a.title) + '"')
+    .replace('<div id="a-body"></div>', '<div id="a-body">' + body + '</div>')
+    .replace('<ol id="a-toc"></ol>', '<ol id="a-toc">' + toc + '</ol>');
+  fs.writeFileSync(path.join(dir, url), p);
+}
+fs.unlinkSync(path.join(dir, 'article.html'));
+console.log('built articles.html, gallery.html and ' + all.length + ' article pages');
