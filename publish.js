@@ -79,7 +79,8 @@ for (const f of fs.readdirSync(dest).filter((x) => x.endsWith('.html'))) {
 }
 // sitemap and robots
 const urls = ['', ...pages.filter((p) => p !== 'dj-rivka.html')];
-fs.writeFileSync(path.join(dest, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${BASE}${u}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+if (!live) fs.rmSync(path.join(dest, 'sitemap.xml'), { force: true }); // no sitemap while it is only a preview
+else fs.writeFileSync(path.join(dest, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${BASE}${u}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(dest, 'robots.txt'), live ? `User-agent: *\nAllow: /\nSitemap: ${BASE}sitemap.xml\n` : 'User-agent: *\nAllow: /\n');
 
 const run = (c) => execSync(c, { cwd: dest, stdio: 'inherit' });
