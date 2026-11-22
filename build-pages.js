@@ -13,7 +13,7 @@ const header = home.slice(home.indexOf('<header class="top"'), home.indexOf('</h
   .replace(/href="#([a-z-]+)"/g, 'href="dj-rivka.html#$1"')
   .replace('<header class="top"', '<header class="top solid"');
 const footer = home.slice(home.indexOf('<footer class="foot">'), home.indexOf('</footer>') + 9);
-const WA = 'https://wa.me/972504126679?text=' + encodeURIComponent('היי רבקה, הגעתי מהאתר ואשמח לדבר על בת מצווה.');
+const WA = 'https://wa.me/972504126679?text=' + encodeURIComponent('היי רבקה, אני מתחילה לתכנן בת מצווה ואשמח שנדבר?');
 const ARROW = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>';
 const BACK = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>';
 
@@ -23,14 +23,14 @@ function share(title, desc, url, img, type) {
     '<meta property="og:image" content="' + (img || 'public/img/dj-rivka-share.jpg') + '">\n<meta name="twitter:card" content="summary_large_image">\n';
 }
 function page(title, desc, body, scripts) {
-  return `<!doctype html>
+  return (`<!doctype html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${title}</title>
 <meta name="description" content="${desc}">
-${desc ? share(title, desc, /גלריה/.test(title) ? 'gallery.html' : 'articles.html') : ''}
+${desc ? share(title, desc, /גלריה/.test(title) ? 'gallery.html' : /בית ספר/.test(title) ? 'school.html' : 'articles.html') : ''}
 <meta name="theme-color" content="#0b060e">
 <link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png">
@@ -54,7 +54,7 @@ ${formJs}
 <script src="reveal.js"></script>
 </body>
 </html>
-`;
+`).replace(/href="https:\/\/wa\.me\/972504126679"/g, `href="${WA}" target="_blank" rel="noopener"`);
 }
 
 // the call to action on the inner pages is the home page's contact box with its form (same look, same behaviour)
@@ -160,4 +160,18 @@ for (const a of all) {
   fs.writeFileSync(path.join(dir, url), p);
 }
 fs.unlinkSync(path.join(dir, 'article.html'));
-console.log('built articles.html, gallery.html and ' + all.length + ' article pages');
+
+// ---- school area ----
+const WA_ICON = '<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg>';
+const WA_SCHOOL = 'https://wa.me/972504126679?text=' + encodeURIComponent('היי רבקה, אנחנו מתכננות פעילות לבנות ואשמח לשמוע מה את מציעה?');
+fs.writeFileSync(path.join(dir, 'school.html'), page('בית ספר · DJ Rivka', 'פעילות לבנות בבית הספר עם רבקה ניאזוב, DJ Rivka.', `
+<div class="page">
+  <nav class="crumbs" aria-label="מיקום באתר"><a href="dj-rivka.html">דף הבית</a><span aria-hidden="true">/</span><span>בית ספר</span></nav>
+  <div class="arch-head">
+    <h1>בית ספר.</h1>
+    <p>מתכננות פעילות לבנות? אשמח לשמוע מה בראש, ולהציע מה מתאים.</p>
+    <a class="btn btn-main" href="${WA_SCHOOL}" target="_blank" rel="noopener">${WA_ICON}<span>לשיחה בוואטסאפ</span></a>
+  </div>
+</div>`, ''));
+
+console.log('built articles.html, gallery.html, school.html and ' + all.length + ' article pages');

@@ -13,7 +13,7 @@ const src = __dirname, dest = path.resolve(src, '../גרסה לאתר החי (ג
 const msg = process.argv[2] || 'Update the site', live = process.argv.includes('--live');
 
 execSync('node build-pages.js', { cwd: src, stdio: 'inherit' });
-const pages = fs.readdirSync(src).filter((f) => /^(dj-rivka|articles|gallery|article-[\w-]+)\.html$/.test(f));
+const pages = fs.readdirSync(src).filter((f) => /^(dj-rivka|articles|gallery|school|article-[\w-]+)\.html$/.test(f));
 const assets = ['articles-data.js', 'articles.js', 'pages.css', 'reveal.js', 'edits.js', 'edits-apply.js', 'build-pages.js', 'publish.js'];
 // pages that no longer exist in the source leave the published copy too
 for (const f of fs.readdirSync(dest)) if (f.endsWith('.html') && f !== 'index.html' && !pages.includes(f)) fs.unlinkSync(path.join(dest, f));
