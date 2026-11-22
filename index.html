@@ -20,10 +20,10 @@
 <meta name="theme-color" content="#0b060e">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":["LocalBusiness","EntertainmentBusiness"],"@id":"https://hagitrabi.github.io/dj-rivka/#business","name":"DJ Rivka","alternateName":"רבקה ניאזוב","description":"רבקה ניאזוב, דיג'יית, מנחה ומפעילה לבת מצווה ולאירועי נשים. תכנון אישי, לוח זמנים מסודר והנחיה שמכניסה את כולן לרחבה.","url":"https://hagitrabi.github.io/dj-rivka/","image":"https://hagitrabi.github.io/dj-rivka/public/img/dj-rivka-share.jpg","logo":"https://hagitrabi.github.io/dj-rivka/public/img/dj-rivka-logo.webp","telephone":"+972-50-412-6679","email":"dj0555646327@gmail.com","areaServed":{"@type":"Country","name":"Israel"},"priceRange":"לפי התאמה","knowsLanguage":"he"},{"@context":"https://schema.org","@type":"WebSite","name":"DJ Rivka","url":"https://hagitrabi.github.io/dj-rivka/","inLanguage":"he"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"לאילו אזורים את מגיעה?","acceptedAnswer":{"@type":"Answer","text":"לכל הארץ, בתיאום מראש."}},{"@type":"Question","name":"כמה זמן לפני האירוע כדאי לפנות?","acceptedAnswer":{"@type":"Answer","text":"כמה שיותר מוקדם, כדי לשריין את התאריך ולהספיק לתכנן יחד בנחת."}},{"@type":"Question","name":"מה ההבדל בין שתי החבילות?","acceptedAnswer":{"@type":"Answer","text":"חבילת בת מצווה כוללת תקלוט, הגברה, תאורה, הפעלות, הנחיה, תכנון משותף וליווי אישי. חבילת הפרימיום מוסיפה אביזרים לרחבה, מסיבת ריקודים בסגנונות שונים, הפעלות מגבשות ואפשרות לשלב הפרשת חלה, חינה או טקס 12 מתנות."}},{"@type":"Question","name":"אפשר לבחור את השירים?","acceptedAnswer":{"@type":"Answer","text":"כן. בונים את המוזיקה יחד איתך ועם הבת: שירים שהחברות אוהבות, שירים שהמשפחה אוהבת, וגם שירים שלא רוצים לשמוע."}},{"@type":"Question","name":"יש אימוני ריקוד לבת המצווה?","acceptedAnswer":{"@type":"Answer","text":"כן. אני בונה ריקוד אישי לכלת בת המצווה, עם אפשרות לצרף אחיות או בנות דודות, ומלווה באימונים לקראת האירוע."}},{"@type":"Question","name":"השארת פרטים מחייבת אותי?","acceptedAnswer":{"@type":"Answer","text":"לא. השארת הפרטים אינה אישור להזמנת האירוע. סגירת התאריך והתנאים נעשית בתיאום אישי."}}]}]</script>
 <meta name="description" content="רבקה ניאזוב, דיג'יית, מנחה ומפעילה לבת מצווה ולאירועי נשים. תכנון אישי, לוח זמנים מסודר והנחיה שמכניסה את כולן לרחבה.">
-<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png?v=202611221051">
-<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png?v=202611221051">
-<link rel="apple-touch-icon" href="public/img/icon-180.png?v=202611221051">
-<link rel="preload" as="image" href="public/img/dj-rivka-bat-mitzvah-dj.webp?v=202611221051" fetchpriority="high">
+<link rel="icon" type="image/png" sizes="32x32" href="public/img/icon-32.png?v=202611221126">
+<link rel="icon" type="image/png" sizes="512x512" href="public/img/icon-512.png?v=202611221126">
+<link rel="apple-touch-icon" href="public/img/icon-180.png?v=202611221126">
+<link rel="preload" as="image" href="public/img/dj-rivka-bat-mitzvah-dj.webp?v=202611221126" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Assistant:wght@400;500;600;700&family=Secular+One&display=swap" media="print" onload="this.media='all'">
 <script>document.documentElement.classList.add("js")</script>
@@ -1368,27 +1368,21 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 .numbers ul{grid-template-columns:repeat(3,1fr)}
 @media (max-width:760px){.numbers ul{grid-template-columns:repeat(2,1fr)}.numbers .stat:last-child{grid-column:1 / -1}}
 
-/* a slow vinyl in the hero: fine grooves, a gold edge, and the label that stays upright so it reads. It sits in the empty
-   strip above the headline, between Rivka and the text. */
-.hero-disc{--d:clamp(118px,10.4vw,172px);position:absolute;z-index:4;width:var(--d);height:var(--d);top:clamp(112px,16vh,172px);left:50%;translate:-50% 0;pointer-events:none;animation:hero-disc-in 1.4s .6s ease both}
-.hero-disc .hd-plate{position:absolute;inset:0;border-radius:50%;
-  background:
-    conic-gradient(from 20deg,transparent 0 6%,hsl(36 40% 92%/.13) 9%,transparent 15% 50%,hsl(36 40% 92%/.09) 56%,transparent 63%),
-    repeating-radial-gradient(circle,hsl(0 0% 3%) 0 1px,hsl(280 8% 11%) 1px 2.3px);
-  box-shadow:0 0 0 1px hsl(var(--gold)/.55),0 0 0 4px hsl(0 0% 3%),0 0 0 5px hsl(var(--gold)/.2),0 24px 46px -18px #000,0 0 44px -8px hsl(var(--brand-hi)/.4);
-  animation:hero-disc-spin 38s linear infinite}
-.hero-disc .hd-plate::after{content:"";position:absolute;inset:9%;border-radius:50%;box-shadow:inset 0 0 0 1px hsl(var(--gold)/.16)}
-.hero-disc .hd-label{position:absolute;inset:19%;border-radius:50%;display:grid;place-content:center;gap:.12em;text-align:center;
-  background:radial-gradient(circle at 50% 36%,hsl(282 36% 15%),hsl(280 40% 6%));
-  box-shadow:0 0 0 1.5px hsl(var(--gold)/.85),0 0 0 4px hsl(0 0% 4%),inset 0 0 16px hsl(var(--gold)/.14);
-  font:400 clamp(10.5px,.9vw,13.5px)/1.25 var(--font-display);color:hsl(var(--gold-soft))}
+/* the disc in the hero, in the site's own language: black-purple, two thin gold lines, a soft purple glow, white type.
+   "DJ RIVKA" runs around the ring and turns with it; the sentence in the middle stays still so it always reads.
+   It sits in the empty strip above the headline, between Rivka and the text. */
+.hero-disc{--d:clamp(136px,12vw,198px);position:absolute;z-index:4;width:var(--d);height:var(--d);top:clamp(112px,16vh,172px);left:50%;translate:-50% 0;pointer-events:none;animation:hero-disc-in 1.4s .6s ease both}
+.hero-disc .hd-plate{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 14px hsl(var(--brand-hi)/.34)) drop-shadow(0 14px 22px hsl(280 60% 2%/.55));animation:hero-disc-spin 50s linear infinite}
+.hero-disc .hd-plate text{font-family:var(--font-display),'Secular One',sans-serif;font-weight:400;letter-spacing:14.09px;direction:ltr;unicode-bidi:isolate;text-anchor:start}
+.hero-disc .hd-label{position:absolute;inset:21%;border-radius:50%;display:grid;place-content:center;gap:.14em;text-align:center;
+  font:400 clamp(11px,.95vw,15px)/1.25 var(--font-display);color:#fff}
 @keyframes hero-disc-spin{to{transform:rotate(360deg)}}
 @keyframes hero-disc-in{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
 @media (max-width:860px){
-  .hero-disc{--d:clamp(116px,31vw,134px);left:14px;translate:0 0;top:calc(min(104vw,470px) - 40px)}
-  .hero-disc .hd-label{font-size:10.5px}
+  .hero-disc{--d:clamp(133px,35.6vw,154px);left:14px;translate:0 0;top:calc(min(104vw,470px) - 52px)}
+  .hero-disc .hd-label{font-size:11.5px}
 }
-@media (min-width:861px) and (max-width:1100px){.hero-disc{--d:104px;left:54%}}
+@media (min-width:861px) and (max-width:1100px){.hero-disc{--d:120px;left:52%}.hero-disc .hd-label{font-size:11px}}
 @media (prefers-reduced-motion:reduce){.hero-disc{animation:none}.hero-disc .hd-plate{animation:none}}
 </style>
 </head>
@@ -1398,16 +1392,16 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 <div class="loader" id="loader" role="status" aria-live="polite">
   <div class="loader-disc">
     <svg class="loader-ring" viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b84ae8"/><stop offset=".5" stop-color="#e64fb8"/><stop offset="1" stop-color="#f0c27a"/></linearGradient></defs><circle cx="100" cy="100" r="92" fill="none" stroke="hsl(284 30% 18%)" stroke-width="3"/><circle class="arc" cx="100" cy="100" r="92" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round" pathLength="100" stroke-dasharray="32 68"/></svg>
-    <img src="public/img/dj-rivka-logo.webp?v=202611221051" width="1536" height="504" alt="">
+    <img src="public/img/dj-rivka-logo.webp?v=202611221126" width="1536" height="504" alt="">
   </div>
   <span class="sr">טוען את האתר של DJ רבקה</span>
 </div>
 
 <header class="top" id="top">
   <div class="wrap">
-    <nav class="nav nav-a" aria-label="ניווט ראשי"><a href="#about">אודות</a><a href="#packages">חבילות</a><a href="#reviews">המלצות</a><a href="#gallery">גלריה</a><a href="#faq">שאלות נפוצות</a><a href="school.html?v=202611221051" data-school>בית ספר</a></nav>
+    <nav class="nav nav-a" aria-label="ניווט ראשי"><a href="#about">אודות</a><a href="#packages">חבילות</a><a href="#reviews">המלצות</a><a href="#gallery">גלריה</a><a href="#faq">שאלות נפוצות</a><a href="school.html?v=202611221126" data-school>בית ספר</a></nav>
     <a class="logo-tab" href="#main" aria-label="DJ Rivka, לראש הדף">
-      <img src="public/img/dj-rivka-logo.webp?v=202611221051" width="1536" height="504" alt="DJ Rivka">
+      <img src="public/img/dj-rivka-logo.webp?v=202611221126" width="1536" height="504" alt="DJ Rivka">
     </a>
     <div class="nav-b">
       <a class="btn btn-ring js-wa" data-edit="nav-cta" data-edit-label="כפתור בתפריט" aria-label="להזמנות ויצירת קשר בוואטסאפ" href="https://wa.me/972504126679"><span class="long">להזמנות ויצירת קשר</span><span class="short">דברי איתי</span><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg></a></div>
@@ -1415,7 +1409,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="פתיחת התפריט"><span></span><span></span><span></span></button>
   <div class="mnav" id="mnav" hidden>
     <nav aria-label="תפריט ראשי">
-      <a href="#about">אודות</a><a href="#how">איך זה עובד</a><a href="#packages">חבילות</a><a href="#reviews">המלצות</a><a href="#gallery">גלריה</a><a href="#articles">מאמרים</a><a href="#faq">שאלות נפוצות</a><a href="school.html?v=202611221051" data-school>בית ספר</a><a href="#contact">יצירת קשר</a>
+      <a href="#about">אודות</a><a href="#how">איך זה עובד</a><a href="#packages">חבילות</a><a href="#reviews">המלצות</a><a href="#gallery">גלריה</a><a href="#articles">מאמרים</a><a href="#faq">שאלות נפוצות</a><a href="school.html?v=202611221126" data-school>בית ספר</a><a href="#contact">יצירת קשר</a>
     </nav>
     <a class="btn btn-main js-wa" href="https://wa.me/972504126679"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8z"/></svg><span>להזמנות ויצירת קשר בוואטסאפ</span></a>
   </div>
@@ -1451,12 +1445,21 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
       <span class="lamp l1" aria-hidden="true"></span><span class="lamp l2" aria-hidden="true"></span>
       <span class="spot s1" aria-hidden="true"></span><span class="spot s2" aria-hidden="true"></span>
       <span class="pool" aria-hidden="true"></span>
-      <img data-edit="hero-photo" data-edit-label="תמונת הירו" src="public/img/dj-rivka-bat-mitzvah-dj.webp?v=202611221051" width="855" height="1160" alt="רבקה ניאזוב מחייכת, מחזיקה קונטרולר די ג'יי ומצביעה עליו" fetchpriority="high">
+      <img data-edit="hero-photo" data-edit-label="תמונת הירו" src="public/img/dj-rivka-bat-mitzvah-dj.webp?v=202611221126" width="855" height="1160" alt="רבקה ניאזוב מחייכת, מחזיקה קונטרולר די ג'יי ומצביעה עליו" fetchpriority="high">
     </div>
   </div>
-  <div class="hero-disc" role="img" aria-label="מתאים לציבור החרדי והדתי">
-    <span class="hd-plate" aria-hidden="true"></span>
-    <span class="hd-label" aria-hidden="true"><span>מתאים לציבור</span><span>החרדי והדתי</span></span>
+  <div class="hero-disc" role="img" aria-label="מתאים לציבור חרדי דתי. DJ RIVKA">
+    <svg class="hd-plate" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+      <defs>
+        <radialGradient id="hd-bg" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="hsl(282 38% 14%)"/><stop offset="1" stop-color="hsl(280 42% 4.5%)"/></radialGradient>
+        <path id="hd-path" d="M100 100m-77.5 0a77.5 77.5 0 1 1 155 0a77.5 77.5 0 1 1-155 0"/>
+      </defs>
+      <circle cx="100" cy="100" r="100" fill="url(#hd-bg)"/>
+      <g fill="none" stroke="#fff" stroke-opacity=".055" stroke-width=".6"><circle cx="100" cy="100" r="95"/><circle cx="100" cy="100" r="92.5"/><circle cx="100" cy="100" r="62"/><circle cx="100" cy="100" r="59.5"/></g>
+      <g fill="none" stroke="hsl(38 66% 66%)" stroke-opacity=".85" stroke-width=".9"><circle cx="100" cy="100" r="98.6"/><circle cx="100" cy="100" r="67"/></g>
+      <text fill="#fff" font-size="20"><textPath href="#hd-path">DJ RIVKA • DJ RIVKA •</textPath></text>
+    </svg>
+    <span class="hd-label" aria-hidden="true"><span>מתאים לציבור</span><span>חרדי דתי</span></span>
   </div>
 </section>
 
@@ -1520,7 +1523,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
         <p data-edit="about-text" data-name="טקסט אודות">דיג'יית, מנחה ומפיקה של אירועי בת מצווה ואירועי נשים. בשבילי בת מצווה היא הרבה יותר ממסיבה עם מוזיקה: זה ערב שבו הילדה צריכה להרגיש במרכז, ליהנות ולצאת עם ביטחון.</p>
         <p data-edit="about-text2" data-name="טקסט אודות 2">אני מלווה אותך ואת הבת בתכנון, מקשיבה לרעיונות שלכן ובונה איתכן ערב שמתאים לאופי המשפחה ולקהל, כדי שלא תצטרכי להחזיק הכול על הכתפיים.</p>
       </div>
-      <div class="me"><img data-edit="about-photo" data-name="תמונת אודות" src="public/img/rivka-niazov-dj-controller.webp?v=202611221051" width="848" height="842" alt="רבקה ניאזוב בעמדת הדיג׳יי, מחזיקה כבל ואוזניות על הצוואר" loading="lazy"></div>
+      <div class="me"><img data-edit="about-photo" data-name="תמונת אודות" src="public/img/rivka-niazov-dj-controller.webp?v=202611221126" width="848" height="842" alt="רבקה ניאזוב בעמדת הדיג׳יי, מחזיקה כבל ואוזניות על הצוואר" loading="lazy"></div>
       <div class="side"><a class="btn btn-main js-wa" data-edit="about-cta" data-name="כפתור אודות" href="https://wa.me/972504126679"><span data-edit-text>בואי נתחיל בשיחת היכרות</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a></div>
     </div>
   </div>
@@ -1543,7 +1546,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
       </div>
       <div class="disc" id="disc" aria-hidden="true">
         <div class="vinyl" id="vinyl">
-          <div class="vinyl-label"><img src="public/img/dj-rivka-logo.webp?v=202611221051" width="1536" height="504" alt=""></div>
+          <div class="vinyl-label"><img src="public/img/dj-rivka-logo.webp?v=202611221126" width="1536" height="504" alt=""></div>
           <span class="hot"><b>01</b></span><span class="hot"><b>02</b></span><span class="hot"><b>03</b></span><span class="hot"><b>04</b></span>
         </div>
         <div class="shine"></div>
@@ -1562,12 +1565,12 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     </div>
     <div class="svc-track" id="svc-track"><div class="svc-pin" id="svc-pin">
     <div class="stack">
-      <article class="tall "><div class="top"><span class="no">01</span><img data-edit="svc-1-img" data-name="שירות 1, תמונה" src="public/img/dj-rivka-pearl-headband-mixer.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-1" data-name="שירות 1">תקליטנות</h3><p data-edit="svc-1-t" data-name="שירות 1, הסבר">תקליטנות לאירועי בת מצווה ואירועי נשים, עם התאמת המוזיקה לסגנון המשפחה ולקהל.</p></div></article>
-      <article class="tall t-pink"><div class="top"><span class="no">02</span><img data-edit="svc-2-img" data-name="שירות 2, תמונה" src="public/img/dj-rivka-mixing-from-above.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-2" data-name="שירות 2">הנחיה וניהול אירועים</h3><p data-edit="svc-2-t" data-name="שירות 2, הסבר">ניהול רצף האירוע, הנחיית הטקסים וההפעלות, שמירה על לוח הזמנים וחיבור בין חלקי התוכנית.</p></div></article>
-      <article class="tall t-gold"><div class="top"><span class="no">03</span><img data-edit="svc-3-img" data-name="שירות 3, תמונה" src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-3" data-name="שירות 3">הפעלות והרקדות</h3><p data-edit="svc-3-t" data-name="שירות 3, הסבר">הפעלות קבוצתיות, משחקים, ריקודים, אביזרים ופעילויות שמכניסות את המשתתפות לשמחה.</p></div></article>
-      <article class="tall t-deep"><div class="top"><span class="no">04</span><img data-edit="svc-4-img" data-name="שירות 4, תמונה" src="public/img/dj-rivka-headphones-and-flowers.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-4" data-name="שירות 4">טקסים מיוחדים</h3><p data-edit="svc-4-t" data-name="שירות 4, הסבר">הפרשת חלה, חינה בסיסית, טקס 12 מתנות ורעיונות נוספים בהתאם לאופי האירוע.</p></div></article>
-      <article class="tall t-pink"><div class="top"><span class="no">05</span><img data-edit="svc-5-img" data-name="שירות 5, תמונה" src="public/img/dj-rivka-at-the-mixer.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-5" data-name="שירות 5">אימוני ריקוד לבת מצווה</h3><p data-edit="svc-5-t" data-name="שירות 5, הסבר">בניית ריקוד אישי לכלת בת המצווה, עם אפשרות לשלב אחיות או בנות דודות, וליווי באימונים לקראת האירוע.</p></div></article>
-      <article class="tall t-gold"><div class="top"><span class="no">06</span><img data-edit="svc-6-img" data-name="שירות 6, תמונה" src="public/img/dj-rivka-close-up-at-the-mixer.webp?v=202611221051" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-6" data-name="שירות 6">אירועים נוספים</h3><p data-edit="svc-6-t" data-name="שירות 6, הסבר">חינות, מסיבות סיום, מסיבות סידור, אירועי נשים, אירועים קבוצתיים ומסיבות בבתי ספר.</p></div></article>
+      <article class="tall "><div class="top"><span class="no">01</span><img data-edit="svc-1-img" data-name="שירות 1, תמונה" src="public/img/dj-rivka-pearl-headband-mixer.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-1" data-name="שירות 1">תקליטנות</h3><p data-edit="svc-1-t" data-name="שירות 1, הסבר">תקליטנות לאירועי בת מצווה ואירועי נשים, עם התאמת המוזיקה לסגנון המשפחה ולקהל.</p></div></article>
+      <article class="tall t-pink"><div class="top"><span class="no">02</span><img data-edit="svc-2-img" data-name="שירות 2, תמונה" src="public/img/dj-rivka-mixing-from-above.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-2" data-name="שירות 2">הנחיה וניהול אירועים</h3><p data-edit="svc-2-t" data-name="שירות 2, הסבר">ניהול רצף האירוע, הנחיית הטקסים וההפעלות, שמירה על לוח הזמנים וחיבור בין חלקי התוכנית.</p></div></article>
+      <article class="tall t-gold"><div class="top"><span class="no">03</span><img data-edit="svc-3-img" data-name="שירות 3, תמונה" src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-3" data-name="שירות 3">הפעלות והרקדות</h3><p data-edit="svc-3-t" data-name="שירות 3, הסבר">הפעלות קבוצתיות, משחקים, ריקודים, אביזרים ופעילויות שמכניסות את המשתתפות לשמחה.</p></div></article>
+      <article class="tall t-deep"><div class="top"><span class="no">04</span><img data-edit="svc-4-img" data-name="שירות 4, תמונה" src="public/img/dj-rivka-headphones-and-flowers.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-4" data-name="שירות 4">טקסים מיוחדים</h3><p data-edit="svc-4-t" data-name="שירות 4, הסבר">הפרשת חלה, חינה בסיסית, טקס 12 מתנות ורעיונות נוספים בהתאם לאופי האירוע.</p></div></article>
+      <article class="tall t-pink"><div class="top"><span class="no">05</span><img data-edit="svc-5-img" data-name="שירות 5, תמונה" src="public/img/dj-rivka-at-the-mixer.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-5" data-name="שירות 5">אימוני ריקוד לבת מצווה</h3><p data-edit="svc-5-t" data-name="שירות 5, הסבר">בניית ריקוד אישי לכלת בת המצווה, עם אפשרות לשלב אחיות או בנות דודות, וליווי באימונים לקראת האירוע.</p></div></article>
+      <article class="tall t-gold"><div class="top"><span class="no">06</span><img data-edit="svc-6-img" data-name="שירות 6, תמונה" src="public/img/dj-rivka-close-up-at-the-mixer.webp?v=202611221126" alt="" loading="lazy"></div><div class="txt"><h3 data-edit="svc-6" data-name="שירות 6">אירועים נוספים</h3><p data-edit="svc-6-t" data-name="שירות 6, הסבר">חינות, מסיבות סיום, מסיבות סידור, אירועי נשים, אירועים קבוצתיים ומסיבות בבתי ספר.</p></div></article>
     </div>
     <div class="svc-nav" aria-hidden="true"><span class="svc-dots" id="svc-dots"></span></div>
     <p class="swipe" aria-hidden="true">החליקי לצד לעוד שירותים</p>
@@ -1644,10 +1647,10 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   </div>
   <div class="ring-wrap" id="ring-wrap" tabindex="0" role="region" aria-roledescription="קרוסלה" aria-label="הודעות וואטסאפ מאימהות. אפשר להחליף בחיצים">
     <div class="ring-stage" id="ring">
-      <figure class="wa" data-edit="rev-wa-1" data-name="המלצה 1"><img src="public/img/reviews/bat-mitzvah-review-1.webp?v=202611221051" width="800" height="810" alt="הודעת וואטסאפ: מה קורה רבקה, ואוו איזה אירוע מטורף היה, האווירה השמחה שלא השאיר אף אחד בכיסא, והיא נהנתה ולא מפסיקה להגיד שהיה לה כיף במיוחד שהרמת אותה לעמדה. ובעלי אמר שהשירים היו מאוד מכובדים ויפים. אני מאוד שמחה שבחרתי בך לאירוע. ממליצה בחום לכל מי שמתלבטת."></figure>
-      <figure class="wa" data-edit="rev-wa-2" data-name="המלצה 2"><img src="public/img/reviews/bat-mitzvah-review-2.webp?v=202611221051" width="801" height="472" alt="הודעת וואטסאפ: אנחנו עדיין באורות, מה עשית לנו, היה טירוף וכיף, ממש היה שמח ואת ממש עממית וזרמת עם השטויות שלנו באירוע, וגם לפני כל המעטפת והעזרה של לפני אירוע אין בשום מקום. תודה רבה! היא נהנתה מאוד."></figure>
-      <figure class="wa" data-edit="rev-wa-3" data-name="המלצה 3"><img src="public/img/reviews/bat-mitzvah-review-3.webp?v=202611221051" width="766" height="248" alt="הודעת וואטסאפ: רבקה יקרה, תודה על אירוע שמח מהנה ועם הרבה קצב ואנרגיות מדהימות. נהננו מאוד, אין עלייך. תודה רבה."></figure>
-      <figure class="wa" data-edit="rev-wa-4" data-name="המלצה 4"><img src="public/img/reviews/bat-mitzvah-review-4a.webp?v=202611221051" width="763" height="291" alt="תגובה לסטטוס: הורסתת"><img src="public/img/reviews/bat-mitzvah-review-4b.webp?v=202611221051" width="750" height="281" alt="תגובה לסטטוס: היה מושלם מושלם"></figure>
+      <figure class="wa" data-edit="rev-wa-1" data-name="המלצה 1"><img src="public/img/reviews/bat-mitzvah-review-1.webp?v=202611221126" width="800" height="810" alt="הודעת וואטסאפ: מה קורה רבקה, ואוו איזה אירוע מטורף היה, האווירה השמחה שלא השאיר אף אחד בכיסא, והיא נהנתה ולא מפסיקה להגיד שהיה לה כיף במיוחד שהרמת אותה לעמדה. ובעלי אמר שהשירים היו מאוד מכובדים ויפים. אני מאוד שמחה שבחרתי בך לאירוע. ממליצה בחום לכל מי שמתלבטת."></figure>
+      <figure class="wa" data-edit="rev-wa-2" data-name="המלצה 2"><img src="public/img/reviews/bat-mitzvah-review-2.webp?v=202611221126" width="801" height="472" alt="הודעת וואטסאפ: אנחנו עדיין באורות, מה עשית לנו, היה טירוף וכיף, ממש היה שמח ואת ממש עממית וזרמת עם השטויות שלנו באירוע, וגם לפני כל המעטפת והעזרה של לפני אירוע אין בשום מקום. תודה רבה! היא נהנתה מאוד."></figure>
+      <figure class="wa" data-edit="rev-wa-3" data-name="המלצה 3"><img src="public/img/reviews/bat-mitzvah-review-3.webp?v=202611221126" width="766" height="248" alt="הודעת וואטסאפ: רבקה יקרה, תודה על אירוע שמח מהנה ועם הרבה קצב ואנרגיות מדהימות. נהננו מאוד, אין עלייך. תודה רבה."></figure>
+      <figure class="wa" data-edit="rev-wa-4" data-name="המלצה 4"><img src="public/img/reviews/bat-mitzvah-review-4a.webp?v=202611221126" width="763" height="291" alt="תגובה לסטטוס: הורסתת"><img src="public/img/reviews/bat-mitzvah-review-4b.webp?v=202611221126" width="750" height="281" alt="תגובה לסטטוס: היה מושלם מושלם"></figure>
     </div>
   </div>
   <div class="ring-bar">
@@ -1663,7 +1666,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   <div class="wrap head">
     <div><h2 class="h2" id="gallery-title" data-edit="gal-title" data-edit-label="כותרת גלריה">רגעים שעושים את האירוע.</h2>
       <p class="lead" style="margin-top:12px" data-edit="gal-lead" data-edit-label="משפט גלריה">הצצה קטנה לאווירה, למוזיקה ולשמחה שאני מביאה איתי לכל אירוע.</p></div>
-    <a class="btn btn-ghost" href="gallery.html?v=202611221051" data-edit="gal-all" data-name="כפתור לגלריה המלאה"><span data-edit-text>לגלריה המלאה</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
+    <a class="btn btn-ghost" href="gallery.html?v=202611221126" data-edit="gal-all" data-name="כפתור לגלריה המלאה"><span data-edit-text>לגלריה המלאה</span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
   </div>
   <div class="wrap">
     <div class="reels" id="reels" tabindex="0" role="region" aria-label="סרטונים מאירועים, אפשר לגלול לצדדים"></div>
@@ -1683,13 +1686,13 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     <div class="arts-head">
       <h2 id="articles-title" data-edit="art-title" data-name="כותרת מאמרים">רגע לפני שהאירוע מתחיל...</h2>
       <p class="lead" data-edit="art-lead" data-name="משפט מאמרים">טיפים, רעיונות והשראה שיעזרו לך לתכנן בת מצווה ואירוע בדיוק כמו שדמיינת.</p>
-      <a class="btn btn-ghost" href="articles.html?v=202611221051" data-edit="art-all" data-name="כפתור לכל המאמרים"><span data-edit-text>לכל המאמרים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
+      <a class="btn btn-ghost" href="articles.html?v=202611221126" data-edit="art-all" data-name="כפתור לכל המאמרים"><span data-edit-text>לכל המאמרים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a>
     </div>
     <div class="arts-cards">
-      <a class="acard" href="article-planning-a-bat-mitzvah.html?v=202611221051"><span class="pic"><img src="public/img/dj-rivka-at-the-mixer.webp?v=202611221051" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-1" data-name="מאמר 1">מתכננת בת מצווה? מאיפה בכלל מתחילים</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
-      <a class="acard" href="article-when-girls-are-shy-to-dance.html?v=202611221051"><span class="pic"><img src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611221051" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-2" data-name="מאמר 2">ומה אם הבנות מתביישות לרקוד?</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
-      <a class="acard" href="article-bat-mitzvah-song-list.html?v=202611221051"><span class="pic"><img src="public/img/dj-rivka-mixing-from-above.webp?v=202611221051" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-3" data-name="מאמר 3">רשימת השירים: מה כן, מה לא, ולמה זה חשוב</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
-      <a class="acard all" href="articles.html?v=202611221051"><span class="pic"><b>לכל המאמרים</b></span><span class="row"><span class="t">לכל המאמרים</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
+      <a class="acard" href="article-planning-a-bat-mitzvah.html?v=202611221126"><span class="pic"><img src="public/img/dj-rivka-at-the-mixer.webp?v=202611221126" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-1" data-name="מאמר 1">מתכננת בת מצווה? מאיפה בכלל מתחילים</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
+      <a class="acard" href="article-when-girls-are-shy-to-dance.html?v=202611221126"><span class="pic"><img src="public/img/dj-rivka-dancing-with-headphones.webp?v=202611221126" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-2" data-name="מאמר 2">ומה אם הבנות מתביישות לרקוד?</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
+      <a class="acard" href="article-bat-mitzvah-song-list.html?v=202611221126"><span class="pic"><img src="public/img/dj-rivka-mixing-from-above.webp?v=202611221126" alt="" loading="lazy"></span><span class="row"><span class="t" role="heading" aria-level="3" data-edit="art-3" data-name="מאמר 3">רשימת השירים: מה כן, מה לא, ולמה זה חשוב</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
+      <a class="acard all" href="articles.html?v=202611221126"><span class="pic"><b>לכל המאמרים</b></span><span class="row"><span class="t">לכל המאמרים</span><span class="ar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6-6-6 6 6 6"/></svg></span></span></a>
     </div>
   </div>
 </section>
@@ -1761,11 +1764,11 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
 <footer class="foot">
   <div class="wrap ft-s">
     <div class="ft-brand">
-      <a href="./" aria-label="DJ Rivka, לדף הבית"><img src="public/img/dj-rivka-logo.webp?v=202611221051" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
+      <a href="./" aria-label="DJ Rivka, לדף הבית"><img src="public/img/dj-rivka-logo.webp?v=202611221126" width="1536" height="504" alt="DJ Rivka" loading="lazy"></a>
       <p class="slogan">האושר שלי, הרחבה שלך</p>
     </div>
     <nav class="ft-col" aria-label="מפת אתר"><h3>מפת אתר</h3>
-      <ul><li><a href="./#about">אודות</a></li><li><a href="./#how">איך זה עובד</a></li><li><a href="./#packages">חבילות</a></li><li><a href="./#reviews">המלצות</a></li><li><a href="gallery.html?v=202611221051">גלריה</a></li><li><a href="articles.html?v=202611221051">מאמרים</a></li><li><a href="./#faq">שאלות נפוצות</a></li></ul>
+      <ul><li><a href="./#about">אודות</a></li><li><a href="./#how">איך זה עובד</a></li><li><a href="./#packages">חבילות</a></li><li><a href="./#reviews">המלצות</a></li><li><a href="gallery.html?v=202611221126">גלריה</a></li><li><a href="articles.html?v=202611221126">מאמרים</a></li><li><a href="./#faq">שאלות נפוצות</a></li></ul>
     </nav>
     <nav class="ft-col" aria-label="מסמכים"><h3>מסמכים</h3>
       <ul><li><a href="#">הצהרת נגישות</a></li><li><a href="#">מדיניות פרטיות</a></li><li><a href="#">תקנון אתר</a></li></ul>
@@ -1779,14 +1782,14 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   <div class="wrap ft-bottom">
     <span>© 2026 DJ Rivka · רבקה ניאזוב. כל הזכויות שמורות.</span>
     <a class="ft-credit" href="https://wa.me/972548249224?text=%D7%94%D7%99%D7%99%20%D7%97%D7%92%D7%99%D7%AA%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20DJ%20Rivka%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%91%D7%A0%D7%99%D7%99%D7%AA%20%D7%90%D7%AA%D7%A8." target="_blank" rel="noopener" aria-label="אפיון, עיצוב ופיתוח: חגית רבי. פתיחת וואטסאפ">
-      <img src="public/img/hagit-rabi-web-design-logo.png?v=202611221051" width="360" height="160" alt="" loading="lazy"><span>אפיון, עיצוב ופיתוח: <b>חגית רבי</b></span>
+      <img src="public/img/hagit-rabi-web-design-logo.png?v=202611221126" width="360" height="160" alt="" loading="lazy"><span>אפיון, עיצוב ופיתוח: <b>חגית רבי</b></span>
     </a>
   </div>
 </footer>
 <a class="fab js-wa away" id="fab" href="https://wa.me/972504126679" aria-label="שליחת הודעה לרבקה בוואטסאפ"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.4 4c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.7s1.5-.6 1.7-1.2c.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.2l-.8 1c-.1.2-.3.2-.6.1-.3-.2-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.5-.6-.5z"/></svg></a>
 
-<script src="edits.js?v=202611221051"></script>
-<script src="edits-apply.js?v=202611221051"></script>
+<script src="edits.js?v=202611221126"></script>
+<script src="edits-apply.js?v=202611221126"></script>
 <script>
 (function () {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2112,8 +2115,8 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     var strip = document.getElementById('reels'); if (!strip) return;
     var P = 'public/gallery/', n = 16, ids = []; for (var i = 1; i <= n; i++) ids.push('bat-mitzvah-event-' + (i < 10 ? '0' : '') + i);
     strip.innerHTML = ids.map(function (id, i) {
-      return '<figure class="reel" data-i="' + i + '"><img src="' + P + id + '.jpg?v=202611221051" alt="DJ רבקה ניאזוב באירוע בת מצווה, רחבת ריקודים, סרטון ' + (i + 1) + '" loading="lazy" width="480" height="854">' +
-        '<video muted playsinline loop preload="none" data-src="' + P + id + '-loop.mp4?v=202611221051" aria-hidden="true"></video>' +
+      return '<figure class="reel" data-i="' + i + '"><img src="' + P + id + '.jpg?v=202611221126" alt="DJ רבקה ניאזוב באירוע בת מצווה, רחבת ריקודים, סרטון ' + (i + 1) + '" loading="lazy" width="480" height="854">' +
+        '<video muted playsinline loop preload="none" data-src="' + P + id + '-loop.mp4?v=202611221126" aria-hidden="true"></video>' +
         '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></figure>';
     }).join('');
     var cards = [].slice.call(strip.children), cur = -1, seen = false;
@@ -2134,7 +2137,7 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
     var t; strip.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(centre, 70); }, { passive: true });
     cards.forEach(function (c, i) { c.addEventListener('click', function () {
       if (i !== cur) { go(i); return; }
-      box.innerHTML = '<video src="' + P + ids[i] + '.mp4?v=202611221051" poster="' + P + ids[i] + '.jpg" controls autoplay playsinline></video>';
+      box.innerHTML = '<video src="' + P + ids[i] + '.mp4?v=202611221126" poster="' + P + ids[i] + '.jpg" controls autoplay playsinline></video>';
       var v = c.querySelector('video'); if (v.src) v.pause(); dlg.showModal(); }); });
     dlg.querySelector('.x').addEventListener('click', function () { dlg.close(); });
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
@@ -2213,6 +2216,6 @@ h1,h2,h3,.h2,.hero h1,.h2,.mess h2,.about h2,.how h2,.svc2 h2,.pk h2,.rev h2,.ar
   });
 })();
 </script>
-<script src="reveal.js?v=202611221051"></script>
+<script src="reveal.js?v=202611221126"></script>
 </body>
 </html>
